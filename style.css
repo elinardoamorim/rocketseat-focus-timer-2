@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  --fc-timer: #323238;
+
+  --bg-card: #E1E1E6;
+  --bg-cardPressed: #02799D;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: 'Roboto', sans-serif;
+
+  height: 100vh;
+
+  display: grid;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: -5rem;
+}
+
+.content {
+  display: flex;
+  gap: 19.2rem;
+  align-items: center;
+}
+
+main {
+  min-width: 32.1rem;
+}
+
+.timer{
+  font-weight: 500;
+  font-size: 12.6166rem;
+  line-height: 14.8rem;
+  color: var(--fc-timer);
+
+  display: flex;
+}
+
+.controls {
+  display: flex;
+  gap: 3.8rem;
+
+  margin-top: 1.5rem;
+  padding: 0 .5rem 0 .5rem;
+}
+
+.hide {
+  display: none;
+}
+
+button {
+  background: transparent;
+  border: none;
+
+  cursor: pointer;
+}
+
+.card-wrapper-sons {
+  display: grid;
+  gap: 3.2rem;
+  grid-template-columns: 1fr 1fr;
+}
+
+.card-wrapper-sons .card {
+  background: var(--bg-card);
+  min-width: 13.8rem;
+  min-height: 15.2rem;
+
+  border-radius: 2.4rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+}
+
+.card-wrapper-sons .cardPressed {
+  background: var(--bg-cardPressed);
+  min-width: 13.8rem;
+  min-height: 15.2rem;
+
+  border-radius: 2.4rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+}
+
+.card-wrapper-sons .cardPressed svg path {
+  fill: #FFFFFF;;
+}
