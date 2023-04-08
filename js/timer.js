@@ -1,3 +1,5 @@
+import Sounds from "./sound.js"
+
 export function Timer({minutesDisplay, secondsDisplay, resetControls}) {
   let minutes = Number(minutesDisplay.textContent)
   let timerOutId
@@ -13,6 +15,7 @@ export function Timer({minutesDisplay, secondsDisplay, resetControls}) {
       if(isFinished) {
         resetControls()
         updateDisplay()
+        Sounds().kitchenTimer.play()
         return
       }
   

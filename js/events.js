@@ -14,25 +14,30 @@ export default function ({controls, timer, sounds}) {
   buttonPlay.addEventListener('click', function () {
     controls.play()
     timer.countDown()
+    sounds.buttonPressAudio.play()
   })
   
   buttonPause.addEventListener('click', function() {
     controls.pauseOrReset()
     timer.hold()
+    sounds.buttonPressAudio.play()
   })
   
   buttonStop.addEventListener('click', () => {
     controls.pauseOrReset()
     timer.reset()
     timer.hold()
+    sounds.buttonPressAudio.play()
   })
   
   buttonSetAdd.addEventListener('click', () => {
     timer.addMinutes()
+    sounds.buttonPressAudio.play()
   })
   
   buttonSetDecrease.addEventListener('click', () => {
     timer.timerRemoveMinutes()
+    sounds.buttonPressAudio.play()
   })
 
   cardForest.addEventListener('click', () => {
