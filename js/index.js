@@ -1,5 +1,6 @@
 import { Controls } from "./controls.js"
 import { Timer } from "./timer.js"
+import Sounds from "./sound.js"
 import Events from "./events.js"
 import {
   buttonPlay,
@@ -23,8 +24,9 @@ const timer = Timer({
   resetControls: controls.pauseOrReset
 })
 
+const sounds = Sounds()
 
-Events({controls, timer})
+Events({controls, timer, sounds})
 
 
 

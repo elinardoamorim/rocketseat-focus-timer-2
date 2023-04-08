@@ -46,7 +46,7 @@ main {
 
 .controls {
   display: flex;
-  gap: 3.8rem;
+  justify-content: space-between;
 
   margin-top: 1.5rem;
   padding: 0 .5rem 0 .5rem;
@@ -79,24 +79,33 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-
+  position: relative;
   cursor: pointer;
 }
 
-.card-wrapper-sons .cardPressed {
+.card-wrapper-sons input {
+  position: absolute;
+  appearance: none;
+  min-width: 13.8rem;
+  min-height: 15.2rem;
+  cursor: pointer;
+}
+
+.card-wrapper-sons input:checked{
   background: var(--bg-cardPressed);
   min-width: 13.8rem;
   min-height: 15.2rem;
-
+  
   border-radius: 2.4rem;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
+  
   cursor: pointer;
 }
 
-.card-wrapper-sons .cardPressed svg path {
-  fill: #FFFFFF;;
+.card-wrapper-sons input:checked + label{
+  position: absolute;
+  cursor: pointer;
+}
+
+.card-wrapper-sons input:checked + label svg path{
+  fill: #FFFFFF;
 }
